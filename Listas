@@ -1,0 +1,42 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package listas;
+
+import java.util.ArrayList;
+
+public class Listas {
+
+    public static void main(String[] args) {
+      ArrayList<String> l= new ArrayList(); //una lista de tipo objeto OBJECT ACEPTA DE TODO CADENAS, ENTEROS  
+      System.out.println(l.isEmpty());
+      l.add("Elemneto1");
+      System.out.println(l.size());//TAmaño
+      System.out.println(l.get(0));// para extraer el elemento
+      System.out.println(l.isEmpty());//regresa un true si esta vacio y un false si esta ocuado 
+      l.add("Elemneto2");
+      l.add("Elemneto3");
+      System.out.println(l.size());//TAmaño
+      System.out.println(l.get(2));// para extraer el ekemnto
+      System.out.println(l.isEmpty());//regresa un true si esta vacio y un false si esta ocuado 
+       
+      for (String elementos:l) //para cada elemento del arraylist va a hacer una accion 
+      {
+            System.out.println(elementos);
+      }
+    
+      ArrayList<String> l2=new DatosLista().MiLista();//crear un nuevo objeto de la clase DatosLista
+      
+        for (int i = 0; i < l2.size(); i++) {
+            System.out.println(l2.get(i));
+            
+        }
+        
+        
+      new DatosLista().RecibeLista(l);
+      new DatosLista().Bidimensional();
+    }
+    
+}
