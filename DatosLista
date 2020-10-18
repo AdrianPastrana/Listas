@@ -1,0 +1,60 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package listas;
+
+import java.util.ArrayList;
+
+public class DatosLista {
+    
+   public ArrayList<String> MiLista()//
+   {
+    ArrayList<String>l2=new ArrayList();
+    l2.add(0, "Valor 0");//indicas la posicion 
+    l2.add(1, "Valor 1");
+    l2.add(2, "Valor 2");
+    return l2;
+   }
+   
+   public void RecibeLista(ArrayList<String>l)//recibe la lista 
+   {
+      for (int i = 0; i < l.size(); i++) {
+            System.out.println(l.get(i));
+            
+        }  
+   }
+   public void Bidimensional()
+   {
+       ArrayList<ArrayList<String>> bd= new ArrayList();//crear una lista dentro de otra lista 
+       for (int i=0; i<4; i++)
+       {
+       bd.add(new ArrayList<String>());
+       }
+       bd.get(0).add("Nombre");
+       bd.get(1).add("Edad");
+       bd.get(2).add("Carrera");
+       bd.get(3).add("Semestre");
+       
+       bd.get(0).add("Ana");
+       bd.get(1).add("30");
+       bd.get(2).add("ISC");
+       bd.get(3).add("9");
+       
+       System.out.print(bd.get(0).get(0)+" ");//del arraylist en la posicion 0 extrae el 0
+       System.out.print(bd.get(1).get(0)+" ");
+       System.out.print(bd.get(2).get(0)+" ");
+       System.out.print(bd.get(3).get(0)+" \n");
+     
+       
+       for (int i = 0; i <bd.get(0).size(); i++) 
+       {
+           for (int j = 0; j < bd.size(); j++) 
+           {
+              System.out.print(bd.get(j).get(i)+" "); 
+           }
+           System.out.println(" ");
+       }
+   }
+}
